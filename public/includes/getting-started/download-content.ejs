@@ -1,0 +1,23 @@
+<div class="row bs-downloads">
+    <div class="col-sm-4">
+      <h3 id="download-bootstrap">Stash Repo</h3>
+      <p>Contains all the files for Magma as well as instructions on how to generate the compiled files and documentation.</p>
+      <p>
+        <a href="http://stash.corp.web:7990/projects/CUX/repos/magma/browse" class="btn btn-lg btn-outline" role="button" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">View Stash Repo</a>
+      </p>
+    </div>
+  </div>
+
+  <h3 id="download-cdn">Magma CDN</h3>
+  <p>Magma is hosted on our internal Mindtap CDN (mindtap-static-lib)</p>
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Latest compiled and minified CSS --&gt;</span>
+<span class="nt">&lt;link </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span> <span class="na">href=</span><span class="s">&quot;http://static.mindtap.cengage.com/cengage/magma/1.0/magma.min.css&quot;</span><span class="nt">&gt;&lt;/link&gt;</span></code></pre></div>
+
+<p>To use the Magma fonts you will need to add a call to Typekit. </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;script</span> type="text/javascript" src="https://use.typekit.net/rwr6vzk.js"> <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> type="text/javascript"<span class="nt">&gt;</span>try{Typekit.load();}catch(e){}<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<p>The Magma icon font is built into Magma so by using the CSS above you are able to call the icons. See the available icons at <a href="http://magma.cengage.com/font/demo.html">http://magma.cengage.com/font/demo.html</a>.</p> 
+<!-- <p>To use the Mamga icon font seperately you can download the latest version from the stash repo at <a href="http://stash.corp.web:7990/projects/CUX/repos/magma-icon-font/browse">http://stash.corp.web:7990/projects/CUX/repos/magma-icon-font/browse</a> or link to the font directly from the CDN (see below). 
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://static.mindtap.cengage.com/cengage/magma/fonts&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></div> -->

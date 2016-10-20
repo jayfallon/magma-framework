@@ -1,0 +1,26 @@
+.jumbotron
+	.container
+		h1 Getting started
+		p An overview of Magma, how to download and use, basic templates and examples, and more.
+
+.container
+	.row
+		.col-md-9(role="main")
+
+			include includes/getting-started/download
+			include includes/getting-started/whats-included
+			include includes/getting-started/compiling
+			include includes/getting-started/basic-template
+			include includes/getting-started/community
+			include includes/getting-started/disabling-responsiveness
+			include includes/getting-started/browser-support
+			include includes/getting-started/third-party
+			include includes/getting-started/accessibility
+
+		.col-md-3
+			.bs-docs-sidebar.hidden-print.hidden-xs.hidden-sm(role="complementary")
+				ul.nav.bs-docs-sidenav
+					include includes/getting-started/getting-started-nav.ejs
+
+				a.back-to-top(href="#top") Back to top
+				a.bs-docs-theme-toggle(href="#") Preview theme

@@ -1,0 +1,24 @@
+a#top
+nav.navbar.navbar-inverse.navbar-static-top(role="navigation")
+  .container
+
+    .navbar-header
+      button.navbar-toggle(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+        span.sr-only Toggle Navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href="index.html") Magma
+
+    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+      ul.nav.navbar-nav
+        li(class="#{ current.source == 'getting-started' ? 'active' : '' }")
+          a(href="getting-started.html") Getting Started
+        li(class="#{ current.source == 'css' ? 'active' : '' }")
+          a(href="css.html") CSS
+        li(class="#{ current.source == 'components' ? 'active' : '' }")
+          a(href="components.html") Components
+        li(class="#{ current.source == 'javascript' ? 'active' : '' }")
+          a(href="javascript.html") JavaScript
+        li(class="#{ current.source == 'styleguide' ? 'active' : '' }")
+          a(href="../index.html") Style Guide

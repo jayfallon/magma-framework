@@ -1,0 +1,841 @@
+<h3 id="overview-doctype">HTML5 doctype</h3>
+  <p>All pages should use the HTML5 doctype. Include it at the beginning of all your projects.</p>
+<div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+  <h3 id="overview-mobile">Mobile first</h3>
+  <p>To ensure proper rendering and touch zooming, <strong>add the viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="nt">&gt;</span></code></pre></div>
+  <p>You can disable zooming capabilities on mobile devices by adding <code>user-scalable=no</code> to the viewport meta tag. This disables zooming, meaning users are only able to scroll, and results in your site feeling a bit more like a native application. Overall, we don't recommend this on every site, so use caution!</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+  <h3 id="overview-type-links">Typography and links</h3>
+  <div class="magma-specific">
+  <p>Magma uses Typekit to serve up a heading, serif, sans-serif and handwritten fonts. All pages must contain the call to load the Typekit fonts:</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;script</span> type="text/javascript" src="https://use.typekit.net/rwr6vzk.js"> <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> type="text/javascript"<span class="nt">&gt;</span>try{Typekit.load();}catch(e){}<span class="nt">&lt;/script&gt;</span></code></pre></div>
+  </div>
+<div class="bs-example">
+    <h2>Heading Font</h2>
+    <h2 class="sans-serif">Sans-Serif Font</h2>
+    <h2 class="serif">Serif Font</h2>
+    <h2 class="handwritten">Handwritten Font</h2>
+  </div><!-- /example -->
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h2&gt;</span>Sans-Serif Font<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;serif&quot;</span><span class="nt">&gt;</span>Serif Font<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;handwritten&quot;</span><span class="nt">&gt;</span>Handwritten Font<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<p>Other defaults are automatically set:</p>
+  <ul>
+    <li>Set <code>background-color: #fff;</code> on the <code>body</code></li>
+    <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li>
+    <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li>
+  </ul>
+  <p>These styles can be found within <code>scaffolding.less</code>.</p>
+
+ <h3>Colors</h3>
+<div class="magma-specific">
+<p>Magma uses a collection of colors that can be user throughout any interface</p>
+<div class="bs-example">
+<h4>Primary Colors</h4>
+  <div class="color-swatches">
+    <div class="color-swatch primary01"></div>
+    <div class="color-swatch primary02"></div>
+    <div class="color-swatch primary03"></div>
+    <div class="color-swatch primary04"></div>
+  </div>
+<h4>Secondary Colors</h4>
+  <div class="color-swatches">
+    <div class="color-swatch secondary01"></div>
+    <div class="color-swatch secondary02"></div>
+    <div class="color-swatch secondary03"></div>
+    <div class="color-swatch secondary04"></div>
+    <div class="color-swatch secondary05"></div>
+    <div class="color-swatch secondary06"></div>
+  </div>
+<h4>Accent Colors</h4>
+  <div class="color-swatches">
+    <div class="color-swatch accent01"></div>
+    <div class="color-swatch accent02"></div>
+    <div class="color-swatch accent03"></div>
+    <div class="color-swatch accent04"></div>
+    <div class="color-swatch accent05"></div>
+    <div class="color-swatch accent06"></div>
+  </div>
+<h4>Limited Colors</h4>
+  <div class="color-swatches">
+    <div class="color-swatch limited01"></div>
+    <div class="color-swatch limited02"></div>
+    <div class="color-swatch limited03"></div>
+  </div>
+</div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"primary01"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"primary02"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"primary03"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"secondary01"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"secondary02"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"secondary03"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"secondary04"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"secondary05"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"secondary06"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"accent01"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"accent02"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"accent03"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"accent04"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"accent05"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"accent06"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"limited01"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"limited02"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"limited03"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre>
+</div>
+</div>
+
+ <h3>Icons</h3>
+<div class="magma-specific">
+<p>Magma uses custom icon font for displaying standard icons, new icons can be added to this font as the need arises.</p>
+<div class="bs-example iconlist">
+
+<div class="bs-glyphicons">
+  <ul class="bs-glyphicons-list clearfix">
+    <li class="wrapper-for-icon">
+      <div class="icon icon-alert"></div>
+      <div class="text">icon icon-alert</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-assign"></div>
+      <div class="text">icon icon-assign</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-bell"></div>
+      <div class="text">icon icon-bell</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-bubble"></div>
+      <div class="text">icon icon-bubble</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-calendar"></div>
+      <div class="text">icon icon-calendar</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-eye-slash"></div>
+      <div class="text">icon icon-eye-slash</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-eye2"></div>
+      <div class="text">icon icon-eye2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-check"></div>
+      <div class="text">icon icon-check</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-clock"><span class="path1"></span><span class="path2"></span><span class="path3"></span></div>
+      <div class="text">icon icon-clock</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-extracredit2"></div>
+      <div class="text">icon icon-extracredit2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-flashcards"></div>
+      <div class="text">icon icon-flashcards</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-lightning"></div>
+      <div class="text">icon icon-lightning</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-highlight"></div>
+      <div class="text">icon icon-highlight</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-key3"></div>
+      <div class="text">icon icon-key3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-list"></div>
+      <div class="text">icon icon-list</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-pin"></div>
+      <div class="text">icon icon-pin</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-profile"></div>
+      <div class="text">icon icon-profile</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-reading2"></div>
+      <div class="text">icon icon-reading2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-target"></div>
+      <div class="text">icon icon-target</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-timed"></div>
+      <div class="text">icon icon-timed</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-timer"></div>
+      <div class="text">icon icon-timer</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-video"></div>
+      <div class="text">icon icon-video</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-wrench"></div>
+      <div class="text">icon icon-wrench</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-home32"></div>
+      <div class="text">icon icon-home32</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-image"></div>
+      <div class="text">icon icon-image</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-images"></div>
+      <div class="text">icon icon-images</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-connection"></div>
+      <div class="text">icon icon-connection</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-copy"></div>
+      <div class="text">icon icon-copy</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-stack"></div>
+      <div class="text">icon icon-stack</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cart"></div>
+      <div class="text">icon icon-cart</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-lifebuoy"></div>
+      <div class="text">icon icon-lifebuoy</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-phone"></div>
+      <div class="text">icon icon-phone</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-phone-hang-up"></div>
+      <div class="text">icon icon-phone-hang-up</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-arrow-down3"></div>
+      <div class="text">icon icon-arrow-down3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-arrow-left3"></div>
+      <div class="text">icon icon-arrow-left3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-arrow-right3"></div>
+      <div class="text">icon icon-arrow-right3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-arrow-up3"></div>
+      <div class="text">icon icon-arrow-up3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-undo"></div>
+      <div class="text">icon icon-undo</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-redo"></div>
+      <div class="text">icon icon-redo</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-undo2"></div>
+      <div class="text">icon icon-undo2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-redo2"></div>
+      <div class="text">icon icon-redo2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-forward"></div>
+      <div class="text">icon icon-forward</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-reply"></div>
+      <div class="text">icon icon-reply</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-spinner2"></div>
+      <div class="text">icon icon-spinner2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-enlarge"></div>
+      <div class="text">icon icon-enlarge</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-shrink"></div>
+      <div class="text">icon icon-shrink</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-enlarge2"></div>
+      <div class="text">icon icon-enlarge2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-shrink2"></div>
+      <div class="text">icon icon-shrink2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-lock"></div>
+      <div class="text">icon icon-lock</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-unlocked"></div>
+      <div class="text">icon icon-unlocked</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-pie-chart"></div>
+      <div class="text">icon icon-pie-chart</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-stats-dots"></div>
+      <div class="text">icon icon-stats-dots</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-stats-bars"></div>
+      <div class="text">icon icon-stats-bars</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-stats-bars2"></div>
+      <div class="text">icon icon-stats-bars2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-truck"></div>
+      <div class="text">icon icon-truck</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-list-numbered"></div>
+      <div class="text">icon icon-list-numbered</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-list3"></div>
+      <div class="text">icon icon-list3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-list2"></div>
+      <div class="text">icon icon-list2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-th-list"></div>
+      <div class="text">icon icon-th-list</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-th"></div>
+      <div class="text">icon icon-th</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-menu"></div>
+      <div class="text">icon icon-menu</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-menu2"></div>
+      <div class="text">icon icon-menu2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-menu3"></div>
+      <div class="text">icon icon-menu3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-menu4"></div>
+      <div class="text">icon icon-menu4</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-download2"></div>
+      <div class="text">icon icon-download2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-upload2"></div>
+      <div class="text">icon icon-upload2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-link"></div>
+      <div class="text">icon icon-link</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-attachment"></div>
+      <div class="text">icon icon-attachment</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-bookmark"></div>
+      <div class="text">icon icon-bookmark</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-star-half"></div>
+      <div class="text">icon icon-star-half</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-star-full"></div>
+      <div class="text">icon icon-star-full</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-warning"></div>
+      <div class="text">icon icon-warning</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-notification"></div>
+      <div class="text">icon icon-notification</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-question"></div>
+      <div class="text">icon icon-question</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-plus"></div>
+      <div class="text">icon icon-plus</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-minus"></div>
+      <div class="text">icon icon-minus</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-info"></div>
+      <div class="text">icon icon-info</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cancel-circle"></div>
+      <div class="text">icon icon-cancel-circle</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-blocked"></div>
+      <div class="text">icon icon-blocked</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cross"></div>
+      <div class="text">icon icon-cross</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-checkmark"></div>
+      <div class="text">icon icon-checkmark</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-play2"></div>
+      <div class="text">icon icon-play2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-pause"></div>
+      <div class="text">icon icon-pause</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-stop"></div>
+      <div class="text">icon icon-stop</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-previous"></div>
+      <div class="text">icon icon-previous</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-next"></div>
+      <div class="text">icon icon-next</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-backward"></div>
+      <div class="text">icon icon-backward</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-forward2"></div>
+      <div class="text">icon icon-forward2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-play3"></div>
+      <div class="text">icon icon-play3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-pause2"></div>
+      <div class="text">icon icon-pause2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-stop2"></div>
+      <div class="text">icon icon-stop2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-backward2"></div>
+      <div class="text">icon icon-backward2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-forward3"></div>
+      <div class="text">icon icon-forward3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-first"></div>
+      <div class="text">icon icon-first</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-last"></div>
+      <div class="text">icon icon-last</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-previous2"></div>
+      <div class="text">icon icon-previous2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-next2"></div>
+      <div class="text">icon icon-next2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-circle-up"></div>
+      <div class="text">icon icon-circle-up</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-circle-right"></div>
+      <div class="text">icon icon-circle-right</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-circle-down"></div>
+      <div class="text">icon icon-circle-down</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-circle-left"></div>
+      <div class="text">icon icon-circle-left</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-paragraph-left"></div>
+      <div class="text">icon icon-paragraph-left</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-paragraph-center"></div>
+      <div class="text">icon icon-paragraph-center</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-paragraph-right"></div>
+      <div class="text">icon icon-paragraph-right</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-paragraph-justify"></div>
+      <div class="text">icon icon-paragraph-justify</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-indent-increase"></div>
+      <div class="text">icon icon-indent-increase</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-indent-decrease"></div>
+      <div class="text">icon icon-indent-decrease</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-apple"></div>
+      <div class="text">icon icon-apple</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-android"></div>
+      <div class="text">icon icon-android</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-windows8"></div>
+      <div class="text">icon icon-windows8</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-music2"></div>
+      <div class="text">icon icon-music2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-search2"></div>
+      <div class="text">icon icon-search2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-envelope"></div>
+      <div class="text">icon icon-envelope</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-envelope-o"></div>
+      <div class="text">icon icon-envelope-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-star"></div>
+      <div class="text">icon icon-star</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-search-plus"></div>
+      <div class="text">icon icon-search-plus</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-search-minus"></div>
+      <div class="text">icon icon-search-minus</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cog2"></div>
+      <div class="text">icon icon-cog2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-trash-o"></div>
+      <div class="text">icon icon-trash-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-o"></div>
+      <div class="text">icon icon-file-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-flag3"></div>
+      <div class="text">icon icon-flag3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-book2"></div>
+      <div class="text">icon icon-book2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-print"></div>
+      <div class="text">icon icon-print</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-pencil3"></div>
+      <div class="text">icon icon-pencil3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-map-marker"></div>
+      <div class="text">icon icon-map-marker</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-thumbs-o-up"></div>
+      <div class="text">icon icon-thumbs-o-up</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-thumbs-o-down"></div>
+      <div class="text">icon icon-thumbs-o-down</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-external-link"></div>
+      <div class="text">icon icon-external-link</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-sign-in"></div>
+      <div class="text">icon icon-sign-in</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-unlock"></div>
+      <div class="text">icon icon-unlock</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-feed5"></div>
+      <div class="text">icon icon-feed5</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-wrench3"></div>
+      <div class="text">icon icon-wrench3</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-caret-down"></div>
+      <div class="text">icon icon-caret-down</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-caret-up"></div>
+      <div class="text">icon icon-caret-up</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-caret-left"></div>
+      <div class="text">icon icon-caret-left</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-caret-right"></div>
+      <div class="text">icon icon-caret-right</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-angle-left"></div>
+      <div class="text">icon icon-angle-left</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-angle-right"></div>
+      <div class="text">icon icon-angle-right</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-angle-up"></div>
+      <div class="text">icon icon-angle-up</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-angle-down"></div>
+      <div class="text">icon icon-angle-down</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-folder-o"></div>
+      <div class="text">icon icon-folder-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-folder-open-o"></div>
+      <div class="text">icon icon-folder-open-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-flag-o"></div>
+      <div class="text">icon icon-flag-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-question2"></div>
+      <div class="text">icon icon-question2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-info2"></div>
+      <div class="text">icon icon-info2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-exclamation"></div>
+      <div class="text">icon icon-exclamation</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-microphone"></div>
+      <div class="text">icon icon-microphone</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-microphone-slash"></div>
+      <div class="text">icon icon-microphone-slash</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-ellipsis-h"></div>
+      <div class="text">icon icon-ellipsis-h</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-ellipsis-v"></div>
+      <div class="text">icon icon-ellipsis-v</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-eur"></div>
+      <div class="text">icon icon-eur</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-gbp"></div>
+      <div class="text">icon icon-gbp</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-dollar"></div>
+      <div class="text">icon icon-dollar</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-inr"></div>
+      <div class="text">icon icon-inr</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cny"></div>
+      <div class="text">icon icon-cny</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-rouble"></div>
+      <div class="text">icon icon-rouble</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-krw"></div>
+      <div class="text">icon icon-krw</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-bitcoin"></div>
+      <div class="text">icon icon-bitcoin</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-bug2"></div>
+      <div class="text">icon icon-bug2</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-dot-circle-o"></div>
+      <div class="text">icon icon-dot-circle-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-bank"></div>
+      <div class="text">icon icon-bank</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-graduation-cap"></div>
+      <div class="text">icon icon-graduation-cap</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-spotify"></div>
+      <div class="text">icon icon-spotify</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-pdf-o"></div>
+      <div class="text">icon icon-file-pdf-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-word-o"></div>
+      <div class="text">icon icon-file-word-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-excel-o"></div>
+      <div class="text">icon icon-file-excel-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-powerpoint-o"></div>
+      <div class="text">icon icon-file-powerpoint-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-image-o"></div>
+      <div class="text">icon icon-image-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-archive-o"></div>
+      <div class="text">icon icon-archive-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-audio-o"></div>
+      <div class="text">icon icon-audio-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-movie-o"></div>
+      <div class="text">icon icon-movie-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-file-code-o"></div>
+      <div class="text">icon icon-code-o</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cc-visa"></div>
+      <div class="text">icon icon-cc-visa</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cc-mastercard"></div>
+      <div class="text">icon icon-cc-mastercard</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cc-discover"></div>
+      <div class="text">icon icon-cc-discover</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cc-amex"></div>
+      <div class="text">icon icon-cc-amex</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cc-paypal"></div>
+      <div class="text">icon icon-cc-paypal</div>
+    </li>
+    <li class="wrapper-for-icon">
+      <div class="icon icon-cc-stripe"></div>
+      <div class="text">icon icon-cc-stripe</div>
+    </li>
+  </ul>
+</div>
+</div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;span </span><span class="na">class=</span><span class="s">"icon icon-bell"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre>
+</div>
+
+</div>
+
+
+  <h3 id="overview-normalize">Normalize.css</h3>
+  <p>For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.</p>
+
+  <h3 id="overview-container">Containers</h3>
+  <p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to <code>padding</code> and more, neither container is nestable.</p>
+  <p>Use <code>.container</code> for a responsive fixed width container.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+  <p>Use <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre></div>

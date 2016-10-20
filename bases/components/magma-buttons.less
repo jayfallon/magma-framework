@@ -1,0 +1,112 @@
+@import "./../../bower_components/bootstrap/less/variables.less";
+@import "./../../bower_components/bootstrap/less/mixins.less";
+@import "./../../bower_components/bootstrap/less/buttons.less";
+
+//== Typography
+@headings-font-family: "gnuolane", Helvetica, Arial, sans-serif;
+@font-family-sans-serif: "open-sans", Helvetica, Arial, sans-serif;
+@font-family-serif: "rooney-web", Georia, "Times New Roman", Times, serif;
+@font-family-handwritten: "matt-b", fantasy;
+@headings-font-weight: 500;
+@font-size-base: 16px;
+@line-height-base: 1.46666667;
+@font-size-h1: ceil(@font-size-base * 2.5);
+@font-size-h2: ceil(@font-size-base * 2);
+@font-size-h3: ceil(@font-size-base * 1.6);
+@font-size-h4: ceil(@font-size-base * 1.4);
+@font-size-h5: ceil(@font-size-base * 1.2);
+@font-size-h6: ceil(@font-size-base * 1.06666667);
+h1, h2, .h1, .h2 {color: @brand-primary;}
+
+
+.serif, .readingtext{font-family: @font-family-serif;}
+.sans-serif{font-family: @font-family-sans-serif;}
+.handwritten {font-family: @font-family-handwritten;}
+.readingtext{font-size:125%;}
+
+
+//== Colors
+@primary01: #3f3f3f; //dark grey
+@primary02: #007db8; //primary blue
+@primary03: #f7f7f7; //light gray
+@primary04: #ffffff; //white
+@secondary01: #063961; //dark blue
+@secondary02: #2e9cd4; //light blue
+@secondary03: #575757; //dark gray
+@secondary04: #7a7a7a; //med gray
+@secondary05: #bfbfbf; //light gray
+@secondary06: #dfdfdf; //very light gray
+@accent01: #6f9823; //dark green
+@accent02: #90b82e; //med green
+@accent03: #9bca43; //light green
+@accent04: #c1510a; //dark orange
+@accent05: #fa6600; //med orange
+@accent06: #f2981d; //light orange
+@limited01: #ef0000; //dark red
+@limited02: #ff5858; //light red
+@limited03: #ececec; //super light gray
+
+@brand-primary: @primary02;
+@brand-success: @accent02;
+@brand-info: @secondary02;
+@brand-warning: @accent05;
+@brand-danger: @limited01;
+@text-color: @primary01;
+@link-color: @primary02;
+@headings-color: @primary02;
+@component-active-bg: @primary03;
+@code-color:@primary01;
+@code-bg:@secondary06;
+
+//== Buttons
+
+//== Ghost buttons states
+
+.btn-default.ghost{background-color:transparent;color:#7a7a7a}
+.btn-dropdown.ghost{background-color:transparent;color:#7a7a7a}
+.btn-primary.ghost{background-color:transparent;color:#007db8}
+.btn-success.ghost{background-color:transparent;color:#90b82e}
+.btn-warning.ghost{background-color:transparent;color:#fa6600}
+.btn-danger.ghost{background-color:transparent;color:#ef0000}
+
+@btn-font-weight:500;
+.btn-default {color:@accent02; background-color:@primary04; border-color:@secondary05;
+  &:hover {color:@accent01; background-color:@primary04; border-color:@secondary05;}
+  &:focus, &.focus, &:active, &.active {color:@accent01; background-color:@secondary06; border-color:@secondary05;}
+}
+
+.btn-primary {color:@primary04; background-color:@primary02; border-color:@primary02;
+  &:hover {color:@primary04; background-color:@secondary02; border-color:@secondary02;}
+  &:focus, &.focus, &:active, &.active{color:@primary04; background-color:@secondary01; border-color:@secondary01;}
+}
+
+.btn-success {color:@primary04; background-color:@accent02; border-color:@accent02;
+  &:hover {color:@primary04; background-color:@accent03; border-color:@accent03;}
+  &:focus, &.focus, &:active, &.active{color:@primary04; background-color:@accent01; border-color:@accent01;}
+}
+
+.btn-info {color:@primary04; background-color:@secondary02; border-color:@secondary02;
+  &:hover {color:@primary04; background-color:@secondary02; border-color:@secondary02;}
+  &:focus, &.focus, &:active, &.active{color:@primary04; background-color:@primary02; border-color:@primary02;}
+}
+
+.btn-warning {color:@primary04; background-color:@accent05; border-color:@accent05;
+  &:hover {color:@primary04; background-color:@accent06; border-color:@accent06;}
+  &:focus, &.focus, &:active, &.active{color:@primary04; background-color:@accent04; border-color:@accent04;}
+}
+
+.btn-danger {color:@primary04; background-color:@limited01; border-color:@limited01;
+  &:hover {color:@primary04; background-color:@limited02; border-color:@limited02;}
+  &:focus, &.focus, &:active, &.active{color:@primary04; background-color:@limited01; border-color:@limited01;}
+}
+
+.btn{padding:.4em 2em;
+  &.disabled, &:disabled, 
+  &.disabled:focus, &.disabled.focus, &:disbaled:focus, &:disbaled.focus,
+  &.disabled:hover, &.disabled.hover, &:disbaled:hover, &:disbaled.hover,
+  &.disabled:active, &.disabled.active, &:disbaled:active, &:disbaled.active{
+    color:@primary01 !important;
+    background-color:@secondary05 !important;
+    border-color:@secondary05 !important;
+  }
+}

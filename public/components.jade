@@ -1,0 +1,38 @@
+.jumbotron
+	.container
+		h1 Bootstrap Components
+		p Over a dozen reusable components built to provide iconography, dropdowns, input groups, navigation, alerts, and much more.
+
+.container
+	.row
+		.col-md-9(role="main")
+
+			include includes/bs_components/glyphicons
+			include includes/bs_components/dropdowns
+			include includes/bs_components/button-groups
+			include includes/bs_components/button-dropdowns
+			include includes/bs_components/input-groups
+			include includes/bs_components/navs
+			include includes/bs_components/navbar
+			include includes/bs_components/breadcrumbs
+			include includes/bs_components/pagination
+			include includes/bs_components/labels
+			include includes/bs_components/badges
+			include includes/bs_components/jumbotron
+			include includes/bs_components/page-header
+			include includes/bs_components/thumbnails
+			include includes/bs_components/alerts
+			include includes/bs_components/progress-bars
+			include includes/bs_components/media-object
+			include includes/bs_components/list-group
+			include includes/bs_components/panels
+			include includes/bs_components/responsive-embed
+			include includes/bs_components/wells
+
+		.col-md-3
+			.bs-docs-sidebar.hidden-print.hidden-xs.hidden-sm(role="complementary")
+				ul.nav.bs-docs-sidenav
+					include includes/bs_components/components-nav.ejs
+
+				a.back-to-top(href="#top") Back to top
+				a.bs-docs-theme-toggle(href="#") Preview theme

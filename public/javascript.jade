@@ -1,0 +1,29 @@
+.jumbotron
+	.container
+		h1 JavaScript
+		p Magma can be used only for it's CSS, but you can use Bootstraps prebuilt jQuery plugin for some functionality if you choose.
+
+.container
+	.row
+		.col-md-9(role="main")
+
+			include includes/javascript/overview
+			include includes/javascript/transitions
+			include includes/javascript/modal
+			include includes/javascript/dropdown
+			include includes/javascript/scrollspy
+			include includes/javascript/tab
+			include includes/javascript/tooltip
+			include includes/javascript/popover
+			include includes/javascript/alert
+			include includes/javascript/button
+			include includes/javascript/collapse
+			include includes/javascript/carousel
+			include includes/javascript/affix
+
+		.col-md-3
+			.bs-docs-sidebar.hidden-print.hidden-xs.hidden-sm(role="complementary")
+				ul.nav.bs-docs-sidenav
+					include includes/javascript/javascript-nav.ejs
+
+				a.back-to-top(href="#top") Back to top

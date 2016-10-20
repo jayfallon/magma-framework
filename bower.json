@@ -1,0 +1,24 @@
+{
+  "name": "cengage-magma",
+  "version": "0.7.0",
+  "authors": [
+    "Isaac Zarsky <isaac.zarsky@cengage.com>",
+    "Jay Fallon <jay.fallon@contractor.cengage.com>"
+  ],
+  "main": "Gulpfile.js",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "http://stash.corp.web:7990/projects/CUX/repos/magma/browse",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1"
+  }
+}

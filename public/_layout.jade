@@ -1,0 +1,47 @@
+doctype
+html.no-js
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		title= title
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		//-link(rel='stylesheet', href='css/normalize.css')
+		//-link(rel='stylesheet', href='css/main.css')
+		link(rel="icon", type="image/png", href="assets/images/icon-cengage.png")
+		//-script(src='js/vendor/modernizr-2.7.1.min.js')
+
+		script(src="https://use.typekit.net/rwr6vzk.js")
+		script.
+			try{Typekit.load();}catch(e){};
+
+		//-bootstrap styles
+		link(rel="stylesheet", href="assets/generated/styles.css")
+
+		//-bootstrap documentation styles
+		link(rel="stylesheet", type="text/css", href="assets/stylesheets/docs.min.css")
+
+		//-magma-docs
+		link(rel="stylesheet", type="text/css", href="assets/stylesheets/magma-docs.css")
+
+	body
+		<!--[if lt IE 8]>
+		p.browsehappy
+		| You are using an <strong>outdated</strong> browser.
+		| Please <a href="http://browsehappy.com/">upgrade your browser</a>
+		| to improve your experience.
+		<![endif]-->
+
+		//- Add your site or application content here
+
+		include includes/_nav
+
+		!= yield
+
+		include includes/_footer
+
+		//- script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+		//- script window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')
+		script(src='assets/generated/jquery.js')
+		script(src='assets/generated/bootstrap.js')
+		script(src="assets/javascript/docs.min.js")

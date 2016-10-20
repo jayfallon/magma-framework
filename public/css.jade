@@ -1,0 +1,30 @@
+.jumbotron
+	.container
+		h1 CSS
+		p Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.
+
+.container
+	.row
+		.col-md-9(role="main")
+
+			include includes/css/overview
+			include includes/css/grid-system
+			include includes/css/typography
+			include includes/css/code
+			include includes/css/tables
+			include includes/css/forms
+			include includes/css/buttons
+			include includes/css/images
+			include includes/css/helper-classes
+			include includes/css/responsive-utilities
+			include includes/css/using-less
+			include includes/css/using-sass
+
+
+		.col-md-3
+			.bs-docs-sidebar.hidden-print.hidden-xs.hidden-sm(role="complementary")
+				ul.nav.bs-docs-sidenav
+					include includes/css/css-nav.ejs
+
+				a.back-to-top(href="#top") Back to top
+				a.bs-docs-theme-toggle(href="#") Preview theme

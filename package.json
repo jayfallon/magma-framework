@@ -1,0 +1,33 @@
+{
+  "name": "cengage-magma",
+  "version": "0.7.0",
+  "description": "Cengage Magma Framework",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.corp.web:7999/cux/magma.git"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "harp": "^0.20.0"
+  },
+  "devDependencies": {
+    "artifact": "^0.5.1",
+    "combined-stream": "0.0.7",
+    "cssnano": "^3.4.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-less": "^3.0.1",
+    "gulp-minify-css": "^0.5.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-stylus": "^2.0.1",
+    "minimist": "^1.1.0"
+  }
+}

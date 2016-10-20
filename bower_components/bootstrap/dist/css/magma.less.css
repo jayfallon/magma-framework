@@ -1,0 +1,8 @@
+.btn{
+	font-weight:600;
+}
+
+.btn-primary{
+	background-image:linear-gradient(to bottom, @btn-primary-bg, @btn-primary-bg2);
+	border-color:#58BCEB;
+}
