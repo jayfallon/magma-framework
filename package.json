@@ -13,7 +13,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "harp": "^0.20.0"
+    "harp": "^0.28.0"
   },
   "devDependencies": {
     "artifact": "^0.5.1",
